@@ -12,11 +12,7 @@
 #import "sweph.h"
 
 static NSBundle *_SWEDataFilesGetBundle() {
-#if STATIC_LIBRARY
     return [NSBundle mainBundle];
-#else
-    return [NSBundle bundleWithIdentifier:@"com.astro.SwissEphemeris"];
-#endif
 }
 
 static NSURL *SWEDataFilesGetFrameworkURL() {
@@ -27,7 +23,7 @@ static NSURL *SWEDataFilesGetFrameworkURL() {
 static NSURL *SWEDataFilesGetExternalURL() {
     static NSURL *pathURL;
     static dispatch_once_t token;
-    
+
     dispatch_once(&token, ^{
         NSArray *appSupportPaths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
         NSCAssert(appSupportPaths.count > 0, @"No Application Support directory found for user '%@'", NSUserName());
@@ -35,7 +31,7 @@ static NSURL *SWEDataFilesGetExternalURL() {
         NSString *externalPath = [appSupportPath stringByAppendingPathComponent:@"SwissEphemeris"];
         pathURL = [NSURL fileURLWithPath:externalPath];
     });
-    
+
     return pathURL;
 }
 #endif
@@ -50,7 +46,7 @@ void _SEGDataFilesCopyPathForFile(char *datapath, const char *fname, const char 
 #if !STATIC_LIBRARY
     NSFileManager *fm = [NSFileManager defaultManager];
     NSString *fileName = @(fname);
-    
+
 #if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
     // Application Support path
     // This is the escape hatch for code signing (immutable resources)
@@ -61,7 +57,7 @@ void _SEGDataFilesCopyPathForFile(char *datapath, const char *fname, const char 
         return;
     }
 #endif
-    
+
     // Given data path
     // There are no ast directories in the framework resources directory
     if (![fileName hasPrefix:@"ast"] && [fm fileExistsAtPath:[@(ephepath) stringByAppendingPathComponent:fileName]]) {
@@ -77,13 +73,13 @@ void _SEGDataFilesCopyPathForFile(char *datapath, const char *fname, const char 
 
 void _SEGLibraryInitialize() {
     swe_set_ephe_path((char *)SWEDataFilesGetFrameworkURL().fileSystemRepresentation);
-    
+
 #if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
     NSURL *externalURL = SWEDataFilesGetExternalURL();
     if (![[NSFileManager defaultManager] fileExistsAtPath:externalURL.path]) {
         NSError *error;
         BOOL created = [[NSFileManager defaultManager] createDirectoryAtURL:externalURL withIntermediateDirectories:YES attributes:nil error:&error];
-        
+
         if (!created) {
             NSLog(@"Error creating Application Support directory: %@", error);
         }
