@@ -37,9 +37,9 @@
 
 
 ### Configure
-Open your project in xcode
-Right click your project root and select "Add Files to ..."
-Select "../node_modules/react-native-swisseph/SwissEphemeris/include" folder  and click "OK"
+1. Open your project in xcode
+2. Right click your project root and select "Add Files to ..."
+3. Select "../node_modules/react-native-swisseph/SwissEphemeris/include" folder  and click "OK"
 
 
 ## Usage
