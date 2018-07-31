@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F4D010020CF9AFC004080BF /* libSwissEphemeris.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4D00F120CF9AFC004080BF /* libSwissEphemeris.a */; };
+		4F4D010120CF9AFC004080BF /* sedeltat.txt.inactive in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F420CF9AFC004080BF /* sedeltat.txt.inactive */; };
+		4F4D010220CF9AFC004080BF /* seorbel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F520CF9AFC004080BF /* seorbel.txt */; };
+		4F4D010320CF9AFC004080BF /* semom18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F620CF9AFC004080BF /* semom18.se1 */; };
+		4F4D010420CF9AFC004080BF /* seas_18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F720CF9AFC004080BF /* seas_18.se1 */; };
+		4F4D010520CF9AFC004080BF /* sepl_18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F820CF9AFC004080BF /* sepl_18.se1 */; };
+		4F4D010620CF9AFC004080BF /* fixstars.cat in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F920CF9AFC004080BF /* fixstars.cat */; };
+		4F4D010720CF9AFC004080BF /* seleapsec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FA20CF9AFC004080BF /* seleapsec.txt */; };
+		4F4D010820CF9AFC004080BF /* semo_18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FB20CF9AFC004080BF /* semo_18.se1 */; };
+		4F4D010920CF9AFC004080BF /* seasm18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FC20CF9AFC004080BF /* seasm18.se1 */; };
+		4F4D010A20CF9AFC004080BF /* seplm18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FD20CF9AFC004080BF /* seplm18.se1 */; };
+		4F4D010B20CF9AFC004080BF /* sefstars.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FE20CF9AFC004080BF /* sefstars.txt */; };
+		4F4DFB9920CE9013004080BF /* RNSwisseph.h in Copy Files */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNSwisseph.h */; };
+		B3E7B58A1CC2AC0600A0062D /* RNSwisseph.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNSwisseph.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F4DFD7820CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		4F4DFD7A20CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
+			remoteInfo = "React-tvOS";
+		};
+		4F4DFD7C20CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C059A1DE3340900C268FA;
+			remoteInfo = yoga;
+		};
+		4F4DFD7E20CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C06751DE3340C00C268FA;
+			remoteInfo = "yoga-tvOS";
+		};
+		4F4DFD8020CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9251DE5FBEC00167DC4;
+			remoteInfo = cxxreact;
+		};
+		4F4DFD8220CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
+			remoteInfo = "cxxreact-tvOS";
+		};
+		4F4DFD8420CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
+			remoteInfo = jschelpers;
+		};
+		4F4DFD8620CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
+			remoteInfo = "jschelpers-tvOS";
+		};
+		4F4DFD8820CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BDC1FC498900052F4D5;
+			remoteInfo = jsinspector;
+		};
+		4F4DFD8A20CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BFA1FC4989A0052F4D5;
+			remoteInfo = "jsinspector-tvOS";
+		};
+		4F4DFD8C20CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
+			remoteInfo = "third-party";
+		};
+		4F4DFD8E20CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
+			remoteInfo = "third-party-tvOS";
+		};
+		4F4DFD9020CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
+			remoteInfo = "double-conversion";
+		};
+		4F4DFD9220CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
+			remoteInfo = "double-conversion-tvOS";
+		};
+		4F4DFD9420CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F3131F5F2E4B0010BF04;
+			remoteInfo = privatedata;
+		};
+		4F4DFD9620CEBC70004080BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
+			remoteInfo = "privatedata-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58B511D91A9E6C8500147676 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				4F4DFB9920CE9013004080BF /* RNSwisseph.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		134814201AA4EA6300B7C361 /* libRNSwisseph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSwisseph.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4D00F120CF9AFC004080BF /* libSwissEphemeris.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSwissEphemeris.a; sourceTree = "<group>"; };
+		4F4D00F320CF9AFC004080BF /* swephexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephexp.h; sourceTree = "<group>"; };
+		4F4D00F420CF9AFC004080BF /* sedeltat.txt.inactive */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sedeltat.txt.inactive; sourceTree = "<group>"; };
+		4F4D00F520CF9AFC004080BF /* seorbel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seorbel.txt; sourceTree = "<group>"; };
+		4F4D00F620CF9AFC004080BF /* semom18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = semom18.se1; sourceTree = "<group>"; };
+		4F4D00F720CF9AFC004080BF /* seas_18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = seas_18.se1; sourceTree = "<group>"; };
+		4F4D00F820CF9AFC004080BF /* sepl_18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sepl_18.se1; sourceTree = "<group>"; };
+		4F4D00F920CF9AFC004080BF /* fixstars.cat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fixstars.cat; sourceTree = "<group>"; };
+		4F4D00FA20CF9AFC004080BF /* seleapsec.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seleapsec.txt; sourceTree = "<group>"; };
+		4F4D00FB20CF9AFC004080BF /* semo_18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = semo_18.se1; sourceTree = "<group>"; };
+		4F4D00FC20CF9AFC004080BF /* seasm18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = seasm18.se1; sourceTree = "<group>"; };
+		4F4D00FD20CF9AFC004080BF /* seplm18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = seplm18.se1; sourceTree = "<group>"; };
+		4F4D00FE20CF9AFC004080BF /* sefstars.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sefstars.txt; sourceTree = "<group>"; };
+		4F4D00FF20CF9AFC004080BF /* sweodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweodef.h; sourceTree = "<group>"; };
+		4F4DFCE120CEB8B9004080BF /* libSwissEphemeris.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSwissEphemeris.a; path = RNSwisseph.xcodeproj/SwissEphemeris/libSwissEphemeris.a; sourceTree = "<group>"; };
+		4F4DFD6520CEBC70004080BF /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../../react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		B3E7B5881CC2AC0600A0062D /* RNSwisseph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwisseph.h; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* RNSwisseph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwisseph.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4D010020CF9AFC004080BF /* libSwissEphemeris.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134814211AA4EA7D00B7C361 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				134814201AA4EA6300B7C361 /* libRNSwisseph.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F4D00F020CF9AFC004080BF /* SwissEphemeris */ = {
+			isa = PBXGroup;
+			children = (
+				4F4D00F120CF9AFC004080BF /* libSwissEphemeris.a */,
+				4F4D00F320CF9AFC004080BF /* swephexp.h */,
+				4F4D00FF20CF9AFC004080BF /* sweodef.h */,
+				4F4D00F220CF9AFC004080BF /* include */,
+			);
+			path = SwissEphemeris;
+			sourceTree = "<group>";
+		};
+		4F4D00F220CF9AFC004080BF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4F4D00F420CF9AFC004080BF /* sedeltat.txt.inactive */,
+				4F4D00F520CF9AFC004080BF /* seorbel.txt */,
+				4F4D00F620CF9AFC004080BF /* semom18.se1 */,
+				4F4D00F720CF9AFC004080BF /* seas_18.se1 */,
+				4F4D00F820CF9AFC004080BF /* sepl_18.se1 */,
+				4F4D00F920CF9AFC004080BF /* fixstars.cat */,
+				4F4D00FA20CF9AFC004080BF /* seleapsec.txt */,
+				4F4D00FB20CF9AFC004080BF /* semo_18.se1 */,
+				4F4D00FC20CF9AFC004080BF /* seasm18.se1 */,
+				4F4D00FD20CF9AFC004080BF /* seplm18.se1 */,
+				4F4D00FE20CF9AFC004080BF /* sefstars.txt */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		4F4DFD6620CEBC70004080BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DFD7920CEBC70004080BF /* libReact.a */,
+				4F4DFD7B20CEBC70004080BF /* libReact.a */,
+				4F4DFD7D20CEBC70004080BF /* libyoga.a */,
+				4F4DFD7F20CEBC70004080BF /* libyoga.a */,
+				4F4DFD8120CEBC70004080BF /* libcxxreact.a */,
+				4F4DFD8320CEBC70004080BF /* libcxxreact.a */,
+				4F4DFD8520CEBC70004080BF /* libjschelpers.a */,
+				4F4DFD8720CEBC70004080BF /* libjschelpers.a */,
+				4F4DFD8920CEBC70004080BF /* libjsinspector.a */,
+				4F4DFD8B20CEBC70004080BF /* libjsinspector-tvOS.a */,
+				4F4DFD8D20CEBC70004080BF /* libthird-party.a */,
+				4F4DFD8F20CEBC70004080BF /* libthird-party.a */,
+				4F4DFD9120CEBC70004080BF /* libdouble-conversion.a */,
+				4F4DFD9320CEBC70004080BF /* libdouble-conversion.a */,
+				4F4DFD9520CEBC70004080BF /* libprivatedata.a */,
+				4F4DFD9720CEBC70004080BF /* libprivatedata-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F73675A20CD4FB100C62A7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DFD6520CEBC70004080BF /* React.xcodeproj */,
+				4F4DFCE120CEB8B9004080BF /* libSwissEphemeris.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58B511D21A9E6C8500147676 = {
+			isa = PBXGroup;
+			children = (
+				4F4D00F020CF9AFC004080BF /* SwissEphemeris */,
+				B3E7B5881CC2AC0600A0062D /* RNSwisseph.h */,
+				B3E7B5891CC2AC0600A0062D /* RNSwisseph.m */,
+				134814211AA4EA7D00B7C361 /* Products */,
+				4F73675A20CD4FB100C62A7D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58B511DA1A9E6C8500147676 /* RNSwisseph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNSwisseph" */;
+			buildPhases = (
+				58B511D71A9E6C8500147676 /* Sources */,
+				58B511D81A9E6C8500147676 /* Frameworks */,
+				58B511D91A9E6C8500147676 /* Copy Files */,
+				4F4DFC2F20CEA524004080BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNSwisseph;
+			productName = RCTDataManager;
+			productReference = 134814201AA4EA6300B7C361 /* libRNSwisseph.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58B511D31A9E6C8500147676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					58B511DA1A9E6C8500147676 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNSwisseph" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58B511D21A9E6C8500147676;
+			productRefGroup = 58B511D21A9E6C8500147676;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4F4DFD6620CEBC70004080BF /* Products */;
+					ProjectRef = 4F4DFD6520CEBC70004080BF /* React.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				58B511DA1A9E6C8500147676 /* RNSwisseph */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4F4DFD7920CEBC70004080BF /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 4F4DFD7820CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD7B20CEBC70004080BF /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 4F4DFD7A20CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD7D20CEBC70004080BF /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 4F4DFD7C20CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD7F20CEBC70004080BF /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 4F4DFD7E20CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD8120CEBC70004080BF /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 4F4DFD8020CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD8320CEBC70004080BF /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 4F4DFD8220CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD8520CEBC70004080BF /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 4F4DFD8420CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD8720CEBC70004080BF /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 4F4DFD8620CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD8920CEBC70004080BF /* libjsinspector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsinspector.a;
+			remoteRef = 4F4DFD8820CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD8B20CEBC70004080BF /* libjsinspector-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsinspector-tvOS.a";
+			remoteRef = 4F4DFD8A20CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD8D20CEBC70004080BF /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 4F4DFD8C20CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD8F20CEBC70004080BF /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 4F4DFD8E20CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD9120CEBC70004080BF /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 4F4DFD9020CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD9320CEBC70004080BF /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 4F4DFD9220CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD9520CEBC70004080BF /* libprivatedata.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libprivatedata.a;
+			remoteRef = 4F4DFD9420CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4F4DFD9720CEBC70004080BF /* libprivatedata-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprivatedata-tvOS.a";
+			remoteRef = 4F4DFD9620CEBC70004080BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F4DFC2F20CEA524004080BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4D010720CF9AFC004080BF /* seleapsec.txt in Resources */,
+				4F4D010320CF9AFC004080BF /* semom18.se1 in Resources */,
+				4F4D010120CF9AFC004080BF /* sedeltat.txt.inactive in Resources */,
+				4F4D010420CF9AFC004080BF /* seas_18.se1 in Resources */,
+				4F4D010220CF9AFC004080BF /* seorbel.txt in Resources */,
+				4F4D010920CF9AFC004080BF /* seasm18.se1 in Resources */,
+				4F4D010620CF9AFC004080BF /* fixstars.cat in Resources */,
+				4F4D010B20CF9AFC004080BF /* sefstars.txt in Resources */,
+				4F4D010820CF9AFC004080BF /* semo_18.se1 in Resources */,
+				4F4D010A20CF9AFC004080BF /* seplm18.se1 in Resources */,
+				4F4D010520CF9AFC004080BF /* sepl_18.se1 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58B511D71A9E6C8500147676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3E7B58A1CC2AC0600A0062D /* RNSwisseph.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		58B511ED1A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58B511EE1A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58B511F01A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwissEphemeris",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNSwisseph;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwissEphemeris",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNSwisseph;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNSwisseph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511ED1A9E6C8500147676 /* Debug */,
+				58B511EE1A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNSwisseph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511F01A9E6C8500147676 /* Debug */,
+				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+}
