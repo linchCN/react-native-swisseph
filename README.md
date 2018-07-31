@@ -43,6 +43,7 @@ Select "../node_modules/react-native-swisseph/SwissEphemeris/include" folder  an
 
 
 ## Usage
+#### Example:
 ```javascript
 
     import swisseph from 'react-native-swisseph';
@@ -119,9 +120,9 @@ See [Programming interface](http://www.astro.com/swisseph/swephprg.htm)  to the 
 
 
 ## References
-[Swiss Ephemeris](http://www.astro.com/swisseph/)
-[swisseph-java](http://th-mack.de/download/index.html)
-[Swiss Ephemeris binding for node.js](https://github.com/mivion/swisseph)
+1.[Swiss Ephemeris](http://www.astro.com/swisseph/)
+2.[swisseph-java](http://th-mack.de/download/index.html)
+3.[Swiss Ephemeris binding for node.js](https://github.com/mivion/swisseph)
 
 
 ## License
