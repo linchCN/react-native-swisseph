@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F4D010020CF9AFC004080BF /* libSwissEphemeris.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4D00F120CF9AFC004080BF /* libSwissEphemeris.a */; };
 		4F4D010120CF9AFC004080BF /* sedeltat.txt.inactive in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F420CF9AFC004080BF /* sedeltat.txt.inactive */; };
 		4F4D010220CF9AFC004080BF /* seorbel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F520CF9AFC004080BF /* seorbel.txt */; };
 		4F4D010320CF9AFC004080BF /* semom18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F620CF9AFC004080BF /* semom18.se1 */; };
@@ -20,6 +19,17 @@
 		4F4D010A20CF9AFC004080BF /* seplm18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FD20CF9AFC004080BF /* seplm18.se1 */; };
 		4F4D010B20CF9AFC004080BF /* sefstars.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FE20CF9AFC004080BF /* sefstars.txt */; };
 		4F4DFB9920CE9013004080BF /* RNSwisseph.h in Copy Files */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNSwisseph.h */; };
+		4F61A5962110691600C6B4F1 /* SwissEphGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5952110691600C6B4F1 /* SwissEphGlue.m */; };
+		4F61A5AB2110693C00C6B4F1 /* swemmoon.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5982110693500C6B4F1 /* swemmoon.c */; };
+		4F61A5AC2110693C00C6B4F1 /* swejpl.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5992110693500C6B4F1 /* swejpl.c */; };
+		4F61A5AD2110693C00C6B4F1 /* swedate.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A59B2110693600C6B4F1 /* swedate.c */; };
+		4F61A5AE2110693C00C6B4F1 /* swehouse.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A59C2110693600C6B4F1 /* swehouse.c */; };
+		4F61A5AF2110693C00C6B4F1 /* swemplan.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A59D2110693600C6B4F1 /* swemplan.c */; };
+		4F61A5B02110693C00C6B4F1 /* sweph.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A59F2110693700C6B4F1 /* sweph.c */; };
+		4F61A5B12110693C00C6B4F1 /* swephlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5A22110693800C6B4F1 /* swephlib.c */; };
+		4F61A5B22110693C00C6B4F1 /* swetest.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5A52110693900C6B4F1 /* swetest.c */; };
+		4F61A5B32110693C00C6B4F1 /* swehel.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5A62110693900C6B4F1 /* swehel.c */; };
+		4F61A5B42110693C00C6B4F1 /* swecl.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5A82110693A00C6B4F1 /* swecl.c */; };
 		B3E7B58A1CC2AC0600A0062D /* RNSwisseph.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNSwisseph.m */; };
 /* End PBXBuildFile section */
 
@@ -154,7 +164,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNSwisseph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSwisseph.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F4D00F120CF9AFC004080BF /* libSwissEphemeris.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSwissEphemeris.a; sourceTree = "<group>"; };
 		4F4D00F320CF9AFC004080BF /* swephexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephexp.h; sourceTree = "<group>"; };
 		4F4D00F420CF9AFC004080BF /* sedeltat.txt.inactive */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sedeltat.txt.inactive; sourceTree = "<group>"; };
 		4F4D00F520CF9AFC004080BF /* seorbel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seorbel.txt; sourceTree = "<group>"; };
@@ -168,8 +177,28 @@
 		4F4D00FD20CF9AFC004080BF /* seplm18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = seplm18.se1; sourceTree = "<group>"; };
 		4F4D00FE20CF9AFC004080BF /* sefstars.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sefstars.txt; sourceTree = "<group>"; };
 		4F4D00FF20CF9AFC004080BF /* sweodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweodef.h; sourceTree = "<group>"; };
-		4F4DFCE120CEB8B9004080BF /* libSwissEphemeris.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSwissEphemeris.a; path = RNSwisseph.xcodeproj/SwissEphemeris/libSwissEphemeris.a; sourceTree = "<group>"; };
 		4F4DFD6520CEBC70004080BF /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../../react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		4F61A5942110691500C6B4F1 /* SwissEphGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwissEphGlue.h; sourceTree = "<group>"; };
+		4F61A5952110691600C6B4F1 /* SwissEphGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwissEphGlue.m; sourceTree = "<group>"; };
+		4F61A5982110693500C6B4F1 /* swemmoon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swemmoon.c; sourceTree = "<group>"; };
+		4F61A5992110693500C6B4F1 /* swejpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swejpl.c; sourceTree = "<group>"; };
+		4F61A59A2110693500C6B4F1 /* swehouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swehouse.h; sourceTree = "<group>"; };
+		4F61A59B2110693600C6B4F1 /* swedate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swedate.c; sourceTree = "<group>"; };
+		4F61A59C2110693600C6B4F1 /* swehouse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swehouse.c; sourceTree = "<group>"; };
+		4F61A59D2110693600C6B4F1 /* swemplan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swemplan.c; sourceTree = "<group>"; };
+		4F61A59E2110693700C6B4F1 /* swenut2000a.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swenut2000a.h; sourceTree = "<group>"; };
+		4F61A59F2110693700C6B4F1 /* sweph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sweph.c; sourceTree = "<group>"; };
+		4F61A5A02110693700C6B4F1 /* swephexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephexp.h; sourceTree = "<group>"; };
+		4F61A5A12110693800C6B4F1 /* swedate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swedate.h; sourceTree = "<group>"; };
+		4F61A5A22110693800C6B4F1 /* swephlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swephlib.c; sourceTree = "<group>"; };
+		4F61A5A32110693800C6B4F1 /* sweodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweodef.h; sourceTree = "<group>"; };
+		4F61A5A42110693900C6B4F1 /* swemptab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swemptab.h; sourceTree = "<group>"; };
+		4F61A5A52110693900C6B4F1 /* swetest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swetest.c; sourceTree = "<group>"; };
+		4F61A5A62110693900C6B4F1 /* swehel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swehel.c; sourceTree = "<group>"; };
+		4F61A5A72110693A00C6B4F1 /* swephlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephlib.h; sourceTree = "<group>"; };
+		4F61A5A82110693A00C6B4F1 /* swecl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swecl.c; sourceTree = "<group>"; };
+		4F61A5A92110693A00C6B4F1 /* swejpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swejpl.h; sourceTree = "<group>"; };
+		4F61A5AA2110693B00C6B4F1 /* sweph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweph.h; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNSwisseph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwisseph.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNSwisseph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwisseph.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,7 +208,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4D010020CF9AFC004080BF /* libSwissEphemeris.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +225,9 @@
 		4F4D00F020CF9AFC004080BF /* SwissEphemeris */ = {
 			isa = PBXGroup;
 			children = (
-				4F4D00F120CF9AFC004080BF /* libSwissEphemeris.a */,
+				4F61A5972110692700C6B4F1 /* swisseph */,
+				4F61A5942110691500C6B4F1 /* SwissEphGlue.h */,
+				4F61A5952110691600C6B4F1 /* SwissEphGlue.m */,
 				4F4D00F320CF9AFC004080BF /* swephexp.h */,
 				4F4D00FF20CF9AFC004080BF /* sweodef.h */,
 				4F4D00F220CF9AFC004080BF /* include */,
@@ -246,11 +276,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4F61A5972110692700C6B4F1 /* swisseph */ = {
+			isa = PBXGroup;
+			children = (
+				4F61A5A82110693A00C6B4F1 /* swecl.c */,
+				4F61A59B2110693600C6B4F1 /* swedate.c */,
+				4F61A5A12110693800C6B4F1 /* swedate.h */,
+				4F61A5A62110693900C6B4F1 /* swehel.c */,
+				4F61A59C2110693600C6B4F1 /* swehouse.c */,
+				4F61A59A2110693500C6B4F1 /* swehouse.h */,
+				4F61A5992110693500C6B4F1 /* swejpl.c */,
+				4F61A5A92110693A00C6B4F1 /* swejpl.h */,
+				4F61A5982110693500C6B4F1 /* swemmoon.c */,
+				4F61A59D2110693600C6B4F1 /* swemplan.c */,
+				4F61A5A42110693900C6B4F1 /* swemptab.h */,
+				4F61A59E2110693700C6B4F1 /* swenut2000a.h */,
+				4F61A5A32110693800C6B4F1 /* sweodef.h */,
+				4F61A59F2110693700C6B4F1 /* sweph.c */,
+				4F61A5AA2110693B00C6B4F1 /* sweph.h */,
+				4F61A5A02110693700C6B4F1 /* swephexp.h */,
+				4F61A5A22110693800C6B4F1 /* swephlib.c */,
+				4F61A5A72110693A00C6B4F1 /* swephlib.h */,
+				4F61A5A52110693900C6B4F1 /* swetest.c */,
+			);
+			path = swisseph;
+			sourceTree = "<group>";
+		};
 		4F73675A20CD4FB100C62A7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4F4DFD6520CEBC70004080BF /* React.xcodeproj */,
-				4F4DFCE120CEB8B9004080BF /* libSwissEphemeris.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -465,7 +520,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F61A5962110691600C6B4F1 /* SwissEphGlue.m in Sources */,
+				4F61A5AB2110693C00C6B4F1 /* swemmoon.c in Sources */,
+				4F61A5B12110693C00C6B4F1 /* swephlib.c in Sources */,
+				4F61A5AD2110693C00C6B4F1 /* swedate.c in Sources */,
+				4F61A5B32110693C00C6B4F1 /* swehel.c in Sources */,
+				4F61A5AC2110693C00C6B4F1 /* swejpl.c in Sources */,
+				4F61A5B42110693C00C6B4F1 /* swecl.c in Sources */,
+				4F61A5B22110693C00C6B4F1 /* swetest.c in Sources */,
+				4F61A5AE2110693C00C6B4F1 /* swehouse.c in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNSwisseph.m in Sources */,
+				4F61A5AF2110693C00C6B4F1 /* swemplan.c in Sources */,
+				4F61A5B02110693C00C6B4F1 /* sweph.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
