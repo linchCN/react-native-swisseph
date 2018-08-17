@@ -371,7 +371,7 @@ RCT_EXPORT_METHOD(swe_calc:(double) tjd
 RCT_EXPORT_METHOD(swe_houses:(double) tjd_ut
                   iflag : (int) iflag
                   geolat : (double) geolat
-                  geolon : (int) geolon
+                  geolon : (double) geolon
                   hsys : (NSString *) hsysStr
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject
@@ -382,7 +382,7 @@ RCT_EXPORT_METHOD(swe_houses:(double) tjd_ut
         if(hsysStr.length > 0){
             hsys = [hsysStr characterAtIndex:0];
         }
-        int32 result = swe_houses_ex(tjd_ut, iflag, geolat, geolon, [[NSString stringWithUTF8String:&hsys] intValue], cusps, ascmc);
+        int32 result = swe_houses_ex(tjd_ut, iflag, geolat, geolon, hsys, cusps, ascmc);
         if(result < 0){
             reject(@"0",@"Can't calculate houses.",nil);
         }

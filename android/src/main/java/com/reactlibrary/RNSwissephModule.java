@@ -392,7 +392,7 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
             double[] cusp = new double[13];
             double[] ascmc = new double[10];
 
-            int flag = sw.swe_houses(tjd_ut,iflag,geolat,geolon,Character.getNumericValue(hsys.charAt(0)),cusp,ascmc);
+            int flag = sw.swe_houses(tjd_ut,iflag,geolat,geolon,hsys.charAt(0),cusp,ascmc);
 
             if(flag < 0){
                 promise.reject("0","Can't calculate houses.");
@@ -434,7 +434,7 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
 
             double[] cusp = new double[13];
             double[] ascmc = new double[10];
-            int flag = sw.swe_houses_armc(armc,geolat,eps,Character.getNumericValue(hsys.charAt(0)),cusp,ascmc);
+            int flag = sw.swe_houses_armc(armc,geolat,eps,hsys.charAt(0),cusp,ascmc);
 
             if(flag < 0){
                 promise.reject("0","Can't calculate houses.");
@@ -476,7 +476,7 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
 
             double[] xpin = new double[2];
             StringBuffer serr = new StringBuffer();
-            double flag = sw.swe_house_pos(armc,geolat,eps,Character.getNumericValue(hsys.charAt(0)),xpin,serr);
+            double flag = sw.swe_house_pos(armc,geolat,eps,hsys.charAt(0),xpin,serr);
 
             if(flag < 0){
                 promise.reject("0",serr.toString());

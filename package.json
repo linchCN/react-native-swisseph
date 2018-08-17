@@ -1,6 +1,6 @@
 {
   "name": "react-native-swisseph",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Swiss Ephemeris binding for react-native",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,9 @@
   ],
   "author": "linch <369955292@qq.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linchenhuicn/react-native-swisseph/issues"
+  },
   "peerDependencies": {
     "react-native": "^0.41.2"
   }
