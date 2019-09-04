@@ -42,6 +42,26 @@ RCT_EXPORT_METHOD(swe_julday:(int) year
 }
 
 
+/**
+ @see https://www.astro.com/swisseph/swephprg.htm#_Toc11319103
+ @param tjd,
+ @return deltat
+ */
+RCT_EXPORT_METHOD(swe_deltat:(double) tjd
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject
+                  ) {
+    @try{
+        double deltat = swe_deltat(tjd);
+        resolve([[NSNumber alloc] initWithDouble:deltat]);
+    }
+    @catch(NSException *exception) {
+        reject(@"0",exception.reason,nil);
+    }
+}
+
+
+
 
 /**
  @see http://www.astro.com/swisseph/swephprg.htm#_Toc505244874
@@ -543,6 +563,31 @@ RCT_EXPORT_METHOD(swe_get_ayanamsa_ut:(int) tjd_ut
         double ayanamsa = swe_get_ayanamsa_ut(tjd_ut);
         
         resolve([[NSNumber alloc] initWithDouble:ayanamsa]);
+        
+        
+    }
+    @catch(NSException *exception) {
+        reject(@"0",exception.reason,nil);
+    }
+}
+
+
+/**
+ * This calculates the sidtime for a given date.
+ *
+ * @param tjd_ut    The date as Julian Day in UT (Universal Time)
+ * @param promise
+ *
+ * @return sidtime
+ */
+RCT_EXPORT_METHOD(swe_sidtime:(int) tjd_ut
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject
+                  ) {
+    @try{
+        double sidtime = swe_sidtime(tjd_ut);
+        
+        resolve([[NSNumber alloc] initWithDouble:sidtime]);
         
         
     }

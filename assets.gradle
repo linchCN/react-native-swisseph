@@ -1,0 +1,58 @@
+/**
+ * Task to copy assets
+ */
+
+def config = project.hasProperty("extassets") ? project.extassets : [];
+
+def extAssetsDir = config.extAssetsDir ?: "../../node_modules/react-native-swisseph/assets";
+def assetsNames = config.assetsNames ?: [ "*.se1" ];
+
+gradle.projectsEvaluated {
+    android.applicationVariants.all { def variant ->
+        def targetName = variant.name.capitalize()
+        def targetPath = variant.dirName
+
+        // Create task for copying fonts
+        def currentFontTask = tasks.create(
+                name: "copy${targetName}Asset",
+                type: Copy) {
+            into("${buildDir}/intermediates")
+
+            iconFontNames.each { fileName ->
+
+              from(extAssetsDir) {
+                include(fileName)
+                into("assets/${targetPath}/swisseph/")
+              }
+
+              // Workaround for Android Gradle Plugin 3.2+ new asset directory
+              from(extAssetsDir) {
+                include(fileName)
+                into("merged_assets/${variant.name}/merge${targetName}Assets/out/swisseph/")
+              }
+
+              // Workaround for Android Gradle Plugin 3.4+ new asset directory
+              from(extAssetsDir) {
+                include(fileName)
+                into("merged_assets/${variant.name}/out/swisseph/")
+              }
+            }
+        }
+
+        currentFontTask.dependsOn("merge${targetName}Resources")
+        currentFontTask.dependsOn("merge${targetName}Assets")
+
+        [
+            "processArmeabi-v7a${targetName}Resources",
+            "processX86${targetName}Resources",
+            "processUniversal${targetName}Resources",
+            "process${targetName}Resources"
+        ].each { name ->
+            Task dependentTask = tasks.findByPath(name);
+
+            if (dependentTask != null) {
+                dependentTask.dependsOn(currentFontTask)
+            }
+        }
+    }
+}

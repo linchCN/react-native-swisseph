@@ -14,6 +14,10 @@ async function swe_revjul(julDay,gregflag) {
     return await RNSwisseph.swe_revjul(julDay,gregflag);
 }
 
+async function swe_deltat(tjd) {
+    return await RNSwisseph.swe_deltat(tjd);
+}
+
 
 async function swe_utc_time_zone(year,mouth,day,hour,min,sec,timezone) {
     return await RNSwisseph.swe_utc_time_zone(year,mouth,day,hour,min,sec,timezone);
@@ -82,6 +86,10 @@ async function swe_fixstar(star,tjd,iflag) {
     return await RNSwisseph.swe_fixstar(star,tjd,iflag);
 }
 
+async function swe_sidtime(tjd_ut) {
+    return await RNSwisseph.swe_sidtime(tjd_ut);
+}
+
 
 async function swe_fixstar_ut(star,tjd_ut,iflag) {
     return await RNSwisseph.swe_fixstar_ut(star,tjd_ut,iflag);
@@ -102,6 +110,7 @@ async function swe_vis_limit_mag(tjd_ut,dgeo,datm,dobs,object_name,helflag) {
 export default {
     ...swisseph,
     swe_julday,
+    swe_deltat,
     swe_revjul,
     swe_utc_time_zone,
     swe_utc_to_jd,
@@ -113,6 +122,7 @@ export default {
     swe_calc,
     swe_houses,
     swe_houses_armc,
+    swe_sidtime,
     swe_house_pos,
     swe_set_sid_mode,
     swe_get_ayanamsa_ut,

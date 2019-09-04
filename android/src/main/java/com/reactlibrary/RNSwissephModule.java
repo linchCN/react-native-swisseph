@@ -21,7 +21,9 @@ import java.util.Map;
 import swisseph.SDate;
 import swisseph.SweDate;
 import swisseph.SweHel;
+import swisseph.SwissData;
 import swisseph.SwissEph;
+import swisseph.SwissLib;
 
 public class RNSwissephModule extends ReactContextBaseJavaModule {
 
@@ -62,6 +64,27 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
 
             double julDay = SweDate.getJulDay(year,month,day,hour,gregflag == 1);
             promise.resolve(julDay);
+
+        } catch (Exception e){
+            promise.reject(e);
+        }
+
+    }
+
+    /**
+     *
+     *
+     *
+     * @param tjd
+     * @param promise
+     */
+    @ReactMethod
+    public void swe_deltat(double tjd,Promise promise){
+
+        try {
+
+            double deltat = SweDate.getDeltaT(tjd);
+            promise.resolve(deltat);
 
         } catch (Exception e){
             promise.reject(e);
@@ -263,6 +286,8 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
         }
 
     }
+
+
 
 
     /**
@@ -535,6 +560,30 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
             double ayanamsa = sw.swe_get_ayanamsa_ut(tjd_ut);
 
             promise.resolve(ayanamsa);
+
+        } catch (Exception e){
+            promise.reject(e);
+        }
+
+    }
+
+
+    /**
+     * This calculates the sidtime for a given date.
+     *
+     * @param tjd_ut    The date as Julian Day in UT (Universal Time)
+     * @param promise
+     *
+     * @return sidtime
+     */
+    @ReactMethod
+    public void swe_sidtime(double tjd_ut,Promise promise){
+
+        try {
+
+            double sidtime = new SwissLib(new SwissData()).swe_sidtime(tjd_ut);
+
+            promise.resolve(sidtime);
 
         } catch (Exception e){
             promise.reject(e);

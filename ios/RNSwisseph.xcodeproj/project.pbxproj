@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F4D010120CF9AFC004080BF /* sedeltat.txt.inactive in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F420CF9AFC004080BF /* sedeltat.txt.inactive */; };
-		4F4D010220CF9AFC004080BF /* seorbel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F520CF9AFC004080BF /* seorbel.txt */; };
-		4F4D010320CF9AFC004080BF /* semom18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F620CF9AFC004080BF /* semom18.se1 */; };
-		4F4D010420CF9AFC004080BF /* seas_18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F720CF9AFC004080BF /* seas_18.se1 */; };
-		4F4D010520CF9AFC004080BF /* sepl_18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F820CF9AFC004080BF /* sepl_18.se1 */; };
-		4F4D010620CF9AFC004080BF /* fixstars.cat in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00F920CF9AFC004080BF /* fixstars.cat */; };
-		4F4D010720CF9AFC004080BF /* seleapsec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FA20CF9AFC004080BF /* seleapsec.txt */; };
-		4F4D010820CF9AFC004080BF /* semo_18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FB20CF9AFC004080BF /* semo_18.se1 */; };
-		4F4D010920CF9AFC004080BF /* seasm18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FC20CF9AFC004080BF /* seasm18.se1 */; };
-		4F4D010A20CF9AFC004080BF /* seplm18.se1 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FD20CF9AFC004080BF /* seplm18.se1 */; };
-		4F4D010B20CF9AFC004080BF /* sefstars.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D00FE20CF9AFC004080BF /* sefstars.txt */; };
 		4F4DFB9920CE9013004080BF /* RNSwisseph.h in Copy Files */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNSwisseph.h */; };
 		4F61A5962110691600C6B4F1 /* SwissEphGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5952110691600C6B4F1 /* SwissEphGlue.m */; };
 		4F61A5AB2110693C00C6B4F1 /* swemmoon.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F61A5982110693500C6B4F1 /* swemmoon.c */; };
@@ -165,17 +154,6 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNSwisseph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSwisseph.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4D00F320CF9AFC004080BF /* swephexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephexp.h; sourceTree = "<group>"; };
-		4F4D00F420CF9AFC004080BF /* sedeltat.txt.inactive */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sedeltat.txt.inactive; sourceTree = "<group>"; };
-		4F4D00F520CF9AFC004080BF /* seorbel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seorbel.txt; sourceTree = "<group>"; };
-		4F4D00F620CF9AFC004080BF /* semom18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = semom18.se1; sourceTree = "<group>"; };
-		4F4D00F720CF9AFC004080BF /* seas_18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = seas_18.se1; sourceTree = "<group>"; };
-		4F4D00F820CF9AFC004080BF /* sepl_18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sepl_18.se1; sourceTree = "<group>"; };
-		4F4D00F920CF9AFC004080BF /* fixstars.cat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fixstars.cat; sourceTree = "<group>"; };
-		4F4D00FA20CF9AFC004080BF /* seleapsec.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seleapsec.txt; sourceTree = "<group>"; };
-		4F4D00FB20CF9AFC004080BF /* semo_18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = semo_18.se1; sourceTree = "<group>"; };
-		4F4D00FC20CF9AFC004080BF /* seasm18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = seasm18.se1; sourceTree = "<group>"; };
-		4F4D00FD20CF9AFC004080BF /* seplm18.se1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = seplm18.se1; sourceTree = "<group>"; };
-		4F4D00FE20CF9AFC004080BF /* sefstars.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sefstars.txt; sourceTree = "<group>"; };
 		4F4D00FF20CF9AFC004080BF /* sweodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweodef.h; sourceTree = "<group>"; };
 		4F4DFD6520CEBC70004080BF /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../../react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		4F61A5942110691500C6B4F1 /* SwissEphGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwissEphGlue.h; sourceTree = "<group>"; };
@@ -230,27 +208,8 @@
 				4F61A5952110691600C6B4F1 /* SwissEphGlue.m */,
 				4F4D00F320CF9AFC004080BF /* swephexp.h */,
 				4F4D00FF20CF9AFC004080BF /* sweodef.h */,
-				4F4D00F220CF9AFC004080BF /* include */,
 			);
 			path = SwissEphemeris;
-			sourceTree = "<group>";
-		};
-		4F4D00F220CF9AFC004080BF /* include */ = {
-			isa = PBXGroup;
-			children = (
-				4F4D00F420CF9AFC004080BF /* sedeltat.txt.inactive */,
-				4F4D00F520CF9AFC004080BF /* seorbel.txt */,
-				4F4D00F620CF9AFC004080BF /* semom18.se1 */,
-				4F4D00F720CF9AFC004080BF /* seas_18.se1 */,
-				4F4D00F820CF9AFC004080BF /* sepl_18.se1 */,
-				4F4D00F920CF9AFC004080BF /* fixstars.cat */,
-				4F4D00FA20CF9AFC004080BF /* seleapsec.txt */,
-				4F4D00FB20CF9AFC004080BF /* semo_18.se1 */,
-				4F4D00FC20CF9AFC004080BF /* seasm18.se1 */,
-				4F4D00FD20CF9AFC004080BF /* seplm18.se1 */,
-				4F4D00FE20CF9AFC004080BF /* sefstars.txt */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		4F4DFD6620CEBC70004080BF /* Products */ = {
@@ -361,6 +320,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -499,17 +459,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4D010720CF9AFC004080BF /* seleapsec.txt in Resources */,
-				4F4D010320CF9AFC004080BF /* semom18.se1 in Resources */,
-				4F4D010120CF9AFC004080BF /* sedeltat.txt.inactive in Resources */,
-				4F4D010420CF9AFC004080BF /* seas_18.se1 in Resources */,
-				4F4D010220CF9AFC004080BF /* seorbel.txt in Resources */,
-				4F4D010920CF9AFC004080BF /* seasm18.se1 in Resources */,
-				4F4D010620CF9AFC004080BF /* fixstars.cat in Resources */,
-				4F4D010B20CF9AFC004080BF /* sefstars.txt in Resources */,
-				4F4D010820CF9AFC004080BF /* semo_18.se1 in Resources */,
-				4F4D010A20CF9AFC004080BF /* seplm18.se1 in Resources */,
-				4F4D010520CF9AFC004080BF /* sepl_18.se1 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
