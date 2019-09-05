@@ -7,7 +7,13 @@
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-swisseph`
+1. With autolinking (react-native 0.60+)
+
+    `cd ios && pod install`
+    
+2. Pre react-native 0.60
+
+    `$ react-native link react-native-swisseph`
 
 ### Manual installation
 
@@ -36,10 +42,10 @@
 
 
 
-### Configure
+### Configure （Pre react-native 0.60）
 1. Open your project in xcode
 2. Right click your project root and select "Add Files to ..."
-3. Select "../node_modules/react-native-swisseph/SwissEphemeris/include" folder  and click "OK"
+3. Select "../node_modules/react-native-swisseph/android/src/main/assets" folder  and click "OK"
 
 
 ## Usage

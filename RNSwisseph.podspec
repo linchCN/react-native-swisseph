@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.platforms        = { :ios => "9.0", :tvos => "9.2" }
   s.source           = { :git => 'https://github.com/linchenhuicn/react-native-swisseph.git', :tag => "v#{s.version}" }
   s.source_files     = 'ios/**/*.{h,m,c}'
-  s.resources        = "assets/*.*"
+  s.resources        = "android/src/main/assets/*.*"
   s.dependency         'React'
 end

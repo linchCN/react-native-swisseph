@@ -1,6 +1,6 @@
 {
   "name": "react-native-swisseph",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "Swiss Ephemeris binding for react-native",
   "main": "index.js",
   "scripts": {
@@ -13,11 +13,6 @@
     "astrology",
     "astronomy"
   ],
-  "rnpm": {
-    "assets": [
-      "./assets"
-    ]
-  },
   "author": "linch <369955292@qq.com>",
   "license": "MIT",
   "homepage" : "https://github.com/linchenhuicn/react-native-swisseph/",
