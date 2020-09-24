@@ -108,7 +108,7 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
             sweDate.setCalendarType(gregflag == 1 ,false);
             WritableMap result = Arguments.createMap();
             result.putInt("year",sweDate.getYear());
-            result.putInt("mouth",sweDate.getMonth());
+            result.putInt("month",sweDate.getMonth());
             result.putInt("day",sweDate.getDay());
             result.putDouble("hour",sweDate.getHour());
             promise.resolve(result);
@@ -153,7 +153,7 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
 
             WritableMap result = Arguments.createMap();
             result.putInt("year",date.year);
-            result.putInt("mouth",date.month);
+            result.putInt("month",date.month);
             result.putInt("day",date.day);
             result.putInt("hour",date.hour);
             result.putInt("minute",date.minute);
@@ -218,7 +218,7 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
 
             WritableMap result = Arguments.createMap();
             result.putInt("year",date.year);
-            result.putInt("mouth",date.month);
+            result.putInt("month",date.month);
             result.putInt("day",date.day);
             result.putInt("hour",date.hour);
             result.putInt("minute",date.minute);
@@ -251,7 +251,7 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
 
             WritableMap result = Arguments.createMap();
             result.putInt("year",date.year);
-            result.putInt("mouth",date.month);
+            result.putInt("month",date.month);
             result.putInt("day",date.day);
             result.putInt("hour",date.hour);
             result.putInt("minute",date.minute);
