@@ -896,5 +896,66 @@ RCT_EXPORT_METHOD(swe_vis_limit_mag:(double) tjd_ut
 }
 
 
+RCT_EXPORT_METHOD(swe_nod_aps_ut:(double) tjd_ut
+                  ipl : (int) ipl
+                  iflag : (int) iflag
+                  method : (int) method
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject
+                  ) {
+    @try{
+        double xnasc[6], xndsc[6], xperi[6],xaphe[6];
+        char serr[AS_MAXCH];
+        int32 result = swe_nod_aps_ut(tjd_ut,ipl,iflag,method,xnasc,xndsc,xperi,xaphe,serr);
+        if(result < 0){
+            reject(@"0",[[NSString alloc] initWithUTF8String:serr ],nil);
+        }
+        else{
+
+            resolve(@{
+                @"xnasc" : @{
+                  @"longitude": [[NSNumber alloc] initWithDouble:(xnasc[0])] ,
+                  @"latitude":[[NSNumber alloc] initWithDouble:(xnasc[1])] ,
+                  @"distance":[[NSNumber alloc] initWithDouble:(xnasc[2])] ,
+                  @"speedLong":[[NSNumber alloc] initWithDouble:(xnasc[3])] ,
+                  @"speedLat":[[NSNumber alloc] initWithDouble:(xnasc[4])] ,
+                  @"speedDist":[[NSNumber alloc] initWithDouble:(xnasc[5])] ,
+                },
+                @"xndsc" : @{
+                  @"longitude": [[NSNumber alloc] initWithDouble:(xndsc[0])] ,
+                  @"latitude":[[NSNumber alloc] initWithDouble:(xndsc[1])] ,
+                  @"distance":[[NSNumber alloc] initWithDouble:(xndsc[2])] ,
+                  @"speedLong":[[NSNumber alloc] initWithDouble:(xndsc[3])] ,
+                  @"speedLat":[[NSNumber alloc] initWithDouble:(xndsc[4])] ,
+                  @"speedDist":[[NSNumber alloc] initWithDouble:(xndsc[5])] ,
+                },
+                @"xperi" : @{
+                  @"longitude": [[NSNumber alloc] initWithDouble:(xperi[0])] ,
+                  @"latitude":[[NSNumber alloc] initWithDouble:(xperi[1])] ,
+                  @"distance":[[NSNumber alloc] initWithDouble:(xperi[2])] ,
+                  @"speedLong":[[NSNumber alloc] initWithDouble:(xperi[3])] ,
+                  @"speedLat":[[NSNumber alloc] initWithDouble:(xperi[4])] ,
+                  @"speedDist":[[NSNumber alloc] initWithDouble:(xperi[5])] ,
+                },
+                @"xaphe" : @{
+                  @"longitude": [[NSNumber alloc] initWithDouble:(xaphe[0])] ,
+                  @"latitude":[[NSNumber alloc] initWithDouble:(xaphe[1])] ,
+                  @"distance":[[NSNumber alloc] initWithDouble:(xaphe[2])] ,
+                  @"speedLong":[[NSNumber alloc] initWithDouble:(xaphe[3])] ,
+                  @"speedLat":[[NSNumber alloc] initWithDouble:(xaphe[4])] ,
+                  @"speedDist":[[NSNumber alloc] initWithDouble:(xaphe[5])] ,
+                },
+
+            });
+
+        }
+    }
+    @catch(NSException *exception) {
+        reject(@"0",exception.reason,nil);
+    }
+}
+
+
+
 @end
   

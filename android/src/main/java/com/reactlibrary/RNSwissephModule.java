@@ -859,6 +859,62 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
     }
 
 
+    @ReactMethod
+    public void swe_nod_aps_ut(double tjd_ut,int ipl,int iflag,int method,Promise promise){
+        double[] xnasc = new double[6];
+        double[] xndsc = new double[6];
+        double[] xperi = new double[6];
+        double[] xaphe = new double[6];
+
+        StringBuffer serr = new StringBuffer();
+        int flag = sw.swe_nod_aps_ut(tjd_ut,ipl,iflag,method,xnasc,xndsc,xperi,xaphe,serr);
+        if(flag < 0){
+            promise.reject("0",serr.toString());
+        }
+        else{
+            WritableMap result = Arguments.createMap();
+            WritableMap asc = Arguments.createMap();
+            asc.putDouble("longitude",xnasc[0]);
+            asc.putDouble("latitude",xnasc[1]);
+            asc.putDouble("distance",xnasc[2]);
+            asc.putDouble("speedLong",xnasc[3]);
+            asc.putDouble("speedLat",xnasc[4]);
+            asc.putDouble("speedDist",xnasc[5]);
+            result.putMap("xnasc",asc);
+
+            WritableMap dsc = Arguments.createMap();
+            dsc.putDouble("longitude",xndsc[0]);
+            dsc.putDouble("latitude",xndsc[1]);
+            dsc.putDouble("distance",xndsc[2]);
+            dsc.putDouble("speedLong",xndsc[3]);
+            dsc.putDouble("speedLat",xndsc[4]);
+            dsc.putDouble("speedDist",xndsc[5]);
+            result.putMap("xndsc",dsc);
+
+            WritableMap peri = Arguments.createMap();
+            peri.putDouble("longitude",xperi[0]);
+            peri.putDouble("latitude",xperi[1]);
+            peri.putDouble("distance",xperi[2]);
+            peri.putDouble("speedLong",xperi[3]);
+            peri.putDouble("speedLat",xperi[4]);
+            peri.putDouble("speedDist",xperi[5]);
+            result.putMap("xperi",peri);
+
+            WritableMap aphe = Arguments.createMap();
+            aphe.putDouble("longitude",xperi[0]);
+            aphe.putDouble("latitude",xperi[1]);
+            aphe.putDouble("distance",xperi[2]);
+            aphe.putDouble("speedLong",xperi[3]);
+            aphe.putDouble("speedLat",xperi[4]);
+            aphe.putDouble("speedDist",xperi[5]);
+            result.putMap("xaphe",aphe);
+
+            promise.resolve(result);
+        }
+    }
+
+
+
     /**
      * init asset
      */

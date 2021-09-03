@@ -1,10 +1,3 @@
-//
-//  SwissEphGlue.m
-//  SwissEphemeris
-//
-//  Created by Anner van Hardenbroek on 29-06-14.
-//  Copyright (c) 2014 Behind the Scenes Software. All rights reserved.
-//
 
 #import "SwissEphGlue.h"
 #import <Foundation/Foundation.h>

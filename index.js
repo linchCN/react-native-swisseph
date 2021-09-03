@@ -107,6 +107,11 @@ async function swe_vis_limit_mag(tjd_ut,dgeo,datm,dobs,object_name,helflag) {
     return await RNSwisseph.swe_vis_limit_mag(tjd_ut,dgeo,datm,dobs,object_name,helflag);
 }
 
+async function swe_nod_aps_ut(tjd_ut,ipl,iflag,method) {
+    return await RNSwisseph.swe_nod_aps_ut(tjd_ut,ipl,iflag,method);
+}
+
+
 export default {
     ...swisseph,
     swe_julday,
@@ -131,5 +136,6 @@ export default {
     swe_fixstar_ut,
     swe_heliacal_ut,
     swe_heliacal_pheno_ut,
-    swe_vis_limit_mag
+    swe_vis_limit_mag,
+    swe_nod_aps_ut
 };
