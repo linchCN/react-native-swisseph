@@ -18,6 +18,10 @@ async function swe_deltat(tjd) {
     return await RNSwisseph.swe_deltat(tjd);
 }
 
+async function swe_cotrans(longitude,latitude,distance,eps) {
+    return await RNSwisseph.swe_cotrans(longitude,latitude,distance,eps);
+}
+
 
 async function swe_utc_time_zone(year,mouth,day,hour,min,sec,timezone) {
     return await RNSwisseph.swe_utc_time_zone(year,mouth,day,hour,min,sec,timezone);
@@ -137,5 +141,6 @@ export default {
     swe_heliacal_ut,
     swe_heliacal_pheno_ut,
     swe_vis_limit_mag,
-    swe_nod_aps_ut
+    swe_nod_aps_ut,
+    swe_cotrans
 };

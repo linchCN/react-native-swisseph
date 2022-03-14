@@ -166,6 +166,32 @@ public class RNSwissephModule extends ReactContextBaseJavaModule {
 
     }
 
+    /*
+    * conversion between ecliptical and equatorial polar coordinates.
+    */
+    @ReactMethod
+    public void swe_cotrans(double longitude,double latitude,double distance,double eps,Promise promise){
+
+        try {
+
+            double xin[] = new double[]{longitude,latitude,distance};
+            double xout[] =new double[3];
+
+            new SwissLib(new SwissData()).swe_cotrans(xin,xout,eps);
+
+            WritableMap result = Arguments.createMap();
+            result.putDouble("longitude",xout[0]);
+            result.putDouble("latitude",xout[1]);
+            result.putDouble("distance",xout[1]);
+            promise.resolve(result);
+
+        } catch (Exception e){
+            promise.reject(e);
+        }
+
+    }
+
+
 
     /**
      * Calculates the julian day numbers (TT (==ET) and UT1) from a given date.

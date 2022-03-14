@@ -65,10 +65,10 @@ RCT_EXPORT_METHOD(swe_deltat:(double) tjd
 
 /**
  @see http://www.astro.com/swisseph/swephprg.htm#_Toc505244874
- 
+
  @param Julian day number ,
         Gregorian calendar: 1, Julian calendar: 0,
- 
+
  @return year,
          month,
          day ,
@@ -161,7 +161,7 @@ RCT_EXPORT_METHOD(swe_utc_to_jd:(int) year
         int32 result = swe_utc_to_jd(year,month,day, hour, min, sec,gregflag,dret,serr);
         if(result < 0){
             reject(@"0",[[NSString alloc] initWithUTF8String:serr ],nil);
-            
+
         }
         else{
             resolve(@{
@@ -169,7 +169,7 @@ RCT_EXPORT_METHOD(swe_utc_to_jd:(int) year
                       @"tjd_ut":[[NSNumber alloc] initWithDouble:(dret[1])] ,
                       });
         }
-        
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -201,7 +201,7 @@ RCT_EXPORT_METHOD(swe_jdet_to_utc:(double) tjd_et
                   @"minute":[[NSNumber alloc] initWithInt:(imin)],
                   @"second":[[NSNumber alloc] initWithDouble:(dsec)]
                   });
-        
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -232,7 +232,7 @@ RCT_EXPORT_METHOD(swe_jdut1_to_utc:(double) tjd_ut
                   @"minute":[[NSNumber alloc] initWithInt:(imin)],
                   @"second":[[NSNumber alloc] initWithDouble:(dsec)]
                   });
-        
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -243,7 +243,7 @@ RCT_EXPORT_METHOD(swe_jdut1_to_utc:(double) tjd_ut
 #pragma mark - RCT ephemeris
 
 /**
- 
+
  If you want to do calculations relative to the observer on some place on the earth rather than relative to the center of the earth, you will want to set the geographic location with this method.
 
  @param
@@ -259,7 +259,7 @@ RCT_EXPORT_METHOD(swe_set_topo:(double) geolon
                   rejecter:(RCTPromiseRejectBlock)reject
                   ) {
     @try{
-        
+
         swe_set_topo(geolon,geolat,altitude);
         resolve(nil);
     }
@@ -324,14 +324,45 @@ RCT_EXPORT_METHOD(swe_calc_ut:(double) tjd_ut
                       @"speedLat":[[NSNumber alloc] initWithDouble:(xx[4])] ,
                       @"speedDist":[[NSNumber alloc] initWithDouble:(xx[5])] ,
                       });
-            
+
         }
-        
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
     }
 }
+
+
+
+/*
+* conversion between ecliptical and equatorial polar coordinates.
+*/
+RCT_EXPORT_METHOD(swe_cotrans:(double) longitude
+                  latitude : (double) latitude
+                  distance: (double) distance
+                  eps: (double) eps
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject
+                  ) {
+    @try{
+        double xin[3];
+        double xout[3];
+        xin[0] = longitude;
+        xin[1] = latitude;
+        xin[2] = distance;
+        swe_cotrans(xin, xout, eps);
+        resolve(@{
+              @"longitude": [[NSNumber alloc] initWithDouble:(xout[0])] ,
+              @"latitude":[[NSNumber alloc] initWithDouble:(xout[1])] ,
+              @"distance":[[NSNumber alloc] initWithDouble:(xout[2])] ,
+              });
+    }
+    @catch(NSException *exception) {
+        reject(@"0",exception.reason,nil);
+    }
+}
+
 
 /**
  * This will return the planet name for the given planet number.
@@ -366,7 +397,7 @@ RCT_EXPORT_METHOD(swe_calc:(double) tjd
                       @"speedLat":[[NSNumber alloc] initWithDouble:(xx[4])] ,
                       @"speedDist":[[NSNumber alloc] initWithDouble:(xx[5])] ,
                       });
-            
+
         }
     }
     @catch(NSException *exception) {
@@ -415,12 +446,12 @@ RCT_EXPORT_METHOD(swe_houses:(double) tjd_ut
             for (int i = 0; i<10; i++) {
                 [ascmcArray addObject:[[NSNumber alloc] initWithDouble:ascmc[i]]];
             }
-            
+
             resolve(@{@"cusp" :cuspArray,@"ascmc" : ascmcArray});
         }
-        
-        
-        
+
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -460,7 +491,7 @@ RCT_EXPORT_METHOD(swe_houses_armc:(double) armc
             reject(@"0",@"Can't calculate houses.",nil);
         }
         else{
-            
+
             NSMutableArray *cuspArray = [NSMutableArray new];
             NSMutableArray *ascmcArray = [NSMutableArray new];
             for (int i = 0; i<13; i++) {
@@ -469,7 +500,7 @@ RCT_EXPORT_METHOD(swe_houses_armc:(double) armc
             for (int i = 0; i<10; i++) {
                 [ascmcArray addObject:[[NSNumber alloc] initWithDouble:ascmc[i]]];
             }
-            
+
             resolve(@{@"cusp" :cuspArray,@"ascmc" : ascmcArray});
         }
     }
@@ -514,8 +545,8 @@ RCT_EXPORT_METHOD(swe_house_pos:(double) armc
                       @"latitude":[[NSNumber alloc] initWithDouble:(cusps[1])]
                       });
         }
-        
-    
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -536,10 +567,10 @@ RCT_EXPORT_METHOD(swe_set_sid_mode:(int) sid_mode
                   ) {
     @try{
         swe_set_sid_mode(sid_mode,t0,ayan_t0);
-        
+
         resolve(nil);
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -561,10 +592,10 @@ RCT_EXPORT_METHOD(swe_get_ayanamsa_ut:(int) tjd_ut
                   ) {
     @try{
         double ayanamsa = swe_get_ayanamsa_ut(tjd_ut);
-        
+
         resolve([[NSNumber alloc] initWithDouble:ayanamsa]);
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -586,10 +617,10 @@ RCT_EXPORT_METHOD(swe_sidtime:(int) tjd_ut
                   ) {
     @try{
         double sidtime = swe_sidtime(tjd_ut);
-        
+
         resolve([[NSNumber alloc] initWithDouble:sidtime]);
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -600,7 +631,7 @@ RCT_EXPORT_METHOD(swe_sidtime:(int) tjd_ut
  * This calculates the ayanamsha for a given date. You should call swe_set_sid_mode(...) before, where you will set the mode of ayanamsha, as many different ayanamshas are used in the world today.
  *
  * @param tjd_et The date as Julian Day in ET (Ephemeris Time or Dynamic Time)
- 
+
  * @param promise
  */
 
@@ -610,10 +641,10 @@ RCT_EXPORT_METHOD(swe_get_ayanamsa:(int) tjd_et
                   ) {
     @try{
         double ayanamsa = swe_get_ayanamsa(tjd_et);
-        
+
         resolve([[NSNumber alloc] initWithDouble:ayanamsa]);
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -650,8 +681,8 @@ RCT_EXPORT_METHOD(swe_fixstar:(char*) star
                       @"distance":[[NSNumber alloc] initWithDouble:(xx[2])]
                       });
         }
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -687,8 +718,8 @@ RCT_EXPORT_METHOD(swe_fixstar_ut:(char*) star
                       @"distance":[[NSNumber alloc] initWithDouble:(xx[2])]
                       });
         }
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -715,7 +746,7 @@ RCT_EXPORT_METHOD(swe_heliacal_ut:(double) tjd_ut
         double dret[50],dgeo[3],datm[4],dobs[6];
         char serr[AS_MAXCH];
         char name[AS_MAXCH];
-        
+
         for (int i=0; i<[dgeoArray count]; i++) {
             id obj = [dgeoArray objectAtIndex:i];
             if ([obj isKindOfClass:[NSNumber class]]){
@@ -734,7 +765,7 @@ RCT_EXPORT_METHOD(swe_heliacal_ut:(double) tjd_ut
                 dobs[i] = [obj doubleValue];
             }
         }
-        
+
         strcpy(name,[object_name UTF8String]);
         int32 result = swe_heliacal_ut(tjd_ut,dgeo,datm,dobs,name,event_type,helflag,dret,serr);
         if(result < 0){
@@ -747,8 +778,8 @@ RCT_EXPORT_METHOD(swe_heliacal_ut:(double) tjd_ut
                       @"endVisible":[[NSNumber alloc] initWithDouble:(dret[2])]
                       });
         }
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -795,7 +826,7 @@ RCT_EXPORT_METHOD(swe_heliacal_pheno_ut:(double) tjd_ut
             reject(@"0",[[NSString alloc] initWithUTF8String:serr ],nil);
         }
         else{
-            
+
             resolve(@{
                       @"tcAltitude": [[NSNumber alloc] initWithDouble:(darr[0])] ,
                       @"tcApparentAltitude":[[NSNumber alloc] initWithDouble:(darr[1])],
@@ -830,8 +861,8 @@ RCT_EXPORT_METHOD(swe_heliacal_pheno_ut:(double) tjd_ut
                       @"ksumm":[[NSNumber alloc] initWithDouble:(darr[30])],
                       });
         }
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -876,7 +907,7 @@ RCT_EXPORT_METHOD(swe_vis_limit_mag:(double) tjd_ut
             reject(@"0",[[NSString alloc] initWithUTF8String:serr ],nil);
         }
         else{
-            
+
             resolve(@{
                       @"vissualMagnitudeLimit": [[NSNumber alloc] initWithDouble:(dret[0])] ,
                       @"AltO":[[NSNumber alloc] initWithDouble:(dret[1])],
@@ -887,8 +918,8 @@ RCT_EXPORT_METHOD(swe_vis_limit_mag:(double) tjd_ut
                       @"AziM":[[NSNumber alloc] initWithDouble:(dret[6])]
                       });
         }
-        
-        
+
+
     }
     @catch(NSException *exception) {
         reject(@"0",exception.reason,nil);
@@ -958,4 +989,4 @@ RCT_EXPORT_METHOD(swe_nod_aps_ut:(double) tjd_ut
 
 
 @end
-  
+
