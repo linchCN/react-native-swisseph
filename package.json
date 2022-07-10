@@ -1,11 +1,13 @@
 {
   "name": "react-native-swisseph",
-  "version": "0.0.20",
+  "version": "0.1.0",
   "description": "Swiss Ephemeris binding for react-native",
   "main": "index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": ["./index.d.ts"],
   "keywords": [
     "react-native",
     "swiss",
