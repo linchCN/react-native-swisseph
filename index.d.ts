@@ -31,6 +31,7 @@
  * ```
  */
 declare module "react-native-swisseph" {
+    //@ts-ignore
     export * as default from "index";
 
     /*
@@ -1869,7 +1870,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_calc_ut(tjd_ut: number, ipl: number, iflag: number): Calc;
+    export function swe_calc_ut(tjd_ut: number, ipl: number, iflag: number): Promise<Calc>;
 
     /**
      * ### Description
@@ -1905,7 +1906,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_calc(tjd_et: number, ipl: number, iflag: number): Calc;
+    export function swe_calc(tjd_et: number, ipl: number, iflag: number): Promise<Calc>;
 
     /**
      * ### Description
@@ -1934,7 +1935,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_cotrans(xpo: [lon: number, lat: number, dist: number], eps: number): CoTrans;
+    export function swe_cotrans(xpo: [lon: number, lat: number, dist: number], eps: number): Promise<CoTrans>;
 
     /**
      * ### Description
@@ -1953,7 +1954,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_deltat(tjd: number): number;
+    export function swe_deltat(tjd: number): Promise<number>;
 
     /**
      * ### Description
@@ -1993,7 +1994,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_fixstar_ut(star: string, tjd_ut: number, iflag: number): FixStar;
+    export function swe_fixstar_ut(star: string, tjd_ut: number, iflag: number): Promise<FixStar>;
 
     /**
      * ### Description
@@ -2033,7 +2034,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_fixstar(star: string, tjd_et: number, iflag: number): FixStar;
+    export function swe_fixstar(star: string, tjd_et: number, iflag: number): Promise<FixStar>;
 
     /**
      * ### Description
@@ -2052,7 +2053,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_get_ayanamsa_ut(tjd_ut: number): number;
+    export function swe_get_ayanamsa_ut(tjd_ut: number): Promise<number>;
 
     /**
      * ### Description
@@ -2071,7 +2072,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_get_ayanamsa(tjd_et: number): number;
+    export function swe_get_ayanamsa(tjd_et: number): Promise<number>;
 
     /**
      * ### Description
@@ -2090,7 +2091,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_get_planet_name(ipl: number): string;
+    export function swe_get_planet_name(ipl: number): Promise<string>;
 
     /**
      * ### Description
@@ -2152,7 +2153,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_heliacal_pheno_ut(tjd_ut: number, dgeo: [longitude: number, latitude: number, elevation: number], datm: [pressure: number, temperature: number, humidity: number, meteorological_range: number], dobs: [age: number, sellen_ratio: number, optical_type: number, optical_magnification: number, optical_aperture: number, optical_transmission: number], object_name: string, event_type: number, hel_flag: number): HeliacalPheno;
+    export function swe_heliacal_pheno_ut(tjd_ut: number, dgeo: [longitude: number, latitude: number, elevation: number], datm: [pressure: number, temperature: number, humidity: number, meteorological_range: number], dobs: [age: number, sellen_ratio: number, optical_type: number, optical_magnification: number, optical_aperture: number, optical_transmission: number], object_name: string, event_type: number, hel_flag: number): Promise<HeliacalPheno>;
 
     /**
      * ### Description
@@ -2188,7 +2189,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_heliacal_ut(tjd_ut: number, dgeo: [longitude: number, latitude: number, elevation: number], datm: [pressure: number, temperature: number, humidity: number, meteorological_range: number], dobs: [age: number, sellen_ratio: number, optical_type: number, optical_magnification: number, optical_aperture: number, optical_transmission: number], object_name: string, event_type: number, hel_flag: number): Heliacal;
+    export function swe_heliacal_ut(tjd_ut: number, dgeo: [longitude: number, latitude: number, elevation: number], datm: [pressure: number, temperature: number, humidity: number, meteorological_range: number], dobs: [age: number, sellen_ratio: number, optical_type: number, optical_magnification: number, optical_aperture: number, optical_transmission: number], object_name: string, event_type: number, hel_flag: number): Promise<Heliacal>;
 
     /**
      * ### Description
@@ -2217,7 +2218,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_house_pos(armc: number, geolat: number, eps: number, hsys: string, xpin: [longitude: number, latitude: number]): HousePosition;
+    export function swe_house_pos(armc: number, geolat: number, eps: number, hsys: string, xpin: [longitude: number, latitude: number]): Promise<HousePosition>;
 
     /**
      * ### Description
@@ -2263,8 +2264,8 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_houses_armc(armc: number, geolat: number, eps: number, hsys: HouseSystems, decl?: number): Houses<12>;
-    export function swe_houses_armc(armc: number, geolat: number, eps: number, hsys: "G", decl?: number): Houses<36>;
+    export function swe_houses_armc(armc: number, geolat: number, eps: number, hsys: HouseSystems, decl?: number): Promise<Houses<12>>;
+    export function swe_houses_armc(armc: number, geolat: number, eps: number, hsys: "G", decl?: number): Promise<Houses<36>>;
 
     /**
      * ### Description
@@ -2308,8 +2309,8 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_houses(tjd_ut: number, geolat: number, geolon: number, hsys: HouseSystems): Houses<12>;
-    export function swe_houses(tjd_ut: number, geolat: number, geolon: number, hsys: "G"): Houses<36>;
+    export function swe_houses(tjd_ut: number, geolat: number, geolon: number, hsys: HouseSystems): Promise<Houses<12>>;
+    export function swe_houses(tjd_ut: number, geolat: number, geolon: number, hsys: "G"): Promise<Houses<36>>;
 
     /**
      * ### Description
@@ -2337,7 +2338,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_jdet_to_utc(tjd_et: number, gregflag: number): DateObject2;
+    export function swe_jdet_to_utc(tjd_et: number, gregflag: number): Promise<DateObject2>;
 
     /**
      * ### Description
@@ -2365,7 +2366,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_jdut1_to_utc(tjd_ut: number, gregflag: number): DateObject2;
+    export function swe_jdut1_to_utc(tjd_ut: number, gregflag: number): Promise<DateObject2>;
 
     /**
      * ### Description
@@ -2388,7 +2389,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function julday(year: number, month: number, day: number, hour: number, gregflag: number): number
+    export function swe_julday(year: number, month: number, day: number, hour: number, gregflag: number): Promise<number>;
 
     /**
      * ### Description
@@ -2451,7 +2452,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_nod_aps_ut(tjd_ut: number, ipl: number, iflag: number, method: number): NodAps;
+    export function swe_nod_aps_ut(tjd_ut: number, ipl: number, iflag: number, method: number): Promise<NodAps>;
 
     /**
      * ### Description
@@ -2477,7 +2478,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_revjul(tjd: number, gregflag: number): DateObject;
+    export function swe_revjul(tjd: number, gregflag: number): Promise<DateObject>;
 
     /**
      * ### Description
@@ -2498,7 +2499,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_set_sid_mode(sid_mode: number, t0: number, ayan_t0: number): void;
+    export function swe_set_sid_mode(sid_mode: number, t0: number, ayan_t0: number): Promise<void>;
 
     /**
      * ### Description
@@ -2518,7 +2519,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_set_topo(geolon: number, geolat: number, elevation: number): void;
+    export function swe_set_topo(geolon: number, geolat: number, elevation: number): Promise<void>;
 
     /**
      * ### Description
@@ -2537,7 +2538,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_sidtime(tjd_ut: number): number;
+    export function swe_sidtime(tjd_ut: number): Promise<number>;
 
     /**
      * ### Description
@@ -2570,7 +2571,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_utc_time_zone(iyear: number, imonth: number, iday: number, ihour: number, imin: number, dsec: number, d_timezone: number): DateObject2;
+    export function swe_utc_time_zone(iyear: number, imonth: number, iday: number, ihour: number, imin: number, dsec: number, d_timezone: number): Promise<DateObject>;
 
     /**
      * ### Description
@@ -2604,7 +2605,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_utc_to_jd(iyear: number, imonth: number, iday: number, ihour: number, imin: number, dsec: number, gregflag: number): UtcToJd;
+    export function swe_utc_to_jd(iyear: number, imonth: number, iday: number, ihour: number, imin: number, dsec: number, gregflag: number): Promise<UtcToJd>;
 
     /**
      * ### Description
@@ -2643,7 +2644,7 @@ declare module "react-native-swisseph" {
      * ```
      * &nbsp;
      */
-    export function swe_vis_limit_mag(tjd_ut: number, dgeo: [longitude: number, latitude: number, elevation: number], datm: [pressure: number, temperature: number, humidity: number, meteorological_range: number], dobs: [age: number, sellen_ratio: number, optical_type: number, optical_magnification: number, optical_aperture: number, optical_transmission: number], objectname: string, helflag: number): VisLimitMag;
+    export function swe_vis_limit_mag(tjd_ut: number, dgeo: [longitude: number, latitude: number, elevation: number], datm: [pressure: number, temperature: number, humidity: number, meteorological_range: number], dobs: [age: number, sellen_ratio: number, optical_type: number, optical_magnification: number, optical_aperture: number, optical_transmission: number], objectname: string, helflag: number): Promise<VisLimitMag>;
 
     /*
 	┌──────────────────────────────────────────────────┬───────────┬──────────────────────────────────────────────────┐
