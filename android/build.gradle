@@ -1,16 +1,23 @@
 buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
-  def kotlin_version = rootProject.ext.has("kotlinVersion") ? rootProject.ext.get("kotlinVersion") : project.properties["Swisseph_kotlinVersion"]
+//  def kotlin_version = rootProject.ext.has("kotlinVersion") ? rootProject.ext.get("kotlinVersion") : project.properties["Swisseph_kotlinVersion"]
 
   repositories {
+    maven {
+      // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+      url("$rootDir/../node_modules/react-native/android")
+    }
+    maven { url 'https://dl.google.com/dl/android/maven2/' }
     google()
     mavenCentral()
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:7.2.1"
+//     classpath "com.android.tools.build:gradle:7.2.1"
     // noinspection DifferentKotlinGradleVersion
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+//    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    classpath("com.android.tools.build:gradle")
+    classpath("com.facebook.react:react-native-gradle-plugin")
   }
 }
 
@@ -24,7 +31,7 @@ def isNewArchitectureEnabled() {
 }
 
 apply plugin: "com.android.library"
-apply plugin: "kotlin-android"
+//apply plugin: "kotlin-android"
 
 if (isNewArchitectureEnabled()) {
   apply plugin: "com.facebook.react"
@@ -49,7 +56,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.swisseph"
+    namespace "com.reactnativelibrary.swisseph"
 
     sourceSets {
       main {
@@ -69,6 +76,7 @@ android {
     externalNativeBuild {
       cmake {
         cppFlags "-O2 -frtti -fexceptions -Wall -fstack-protector-all"
+        arguments '-DANDROID_STL=c++_shared'
         abiFilters (*reactNativeArchitectures())
       }
     }
@@ -82,6 +90,7 @@ android {
 
   buildFeatures {
     buildConfig true
+    prefab true
   }
 
   buildTypes {
@@ -101,35 +110,41 @@ android {
 
   sourceSets {
     main {
-      if (isNewArchitectureEnabled()) {
-          java.srcDirs += [
-            "generated/java",
-            "generated/jni"
-          ]
-      }
+//       if (isNewArchitectureEnabled()) {
+//           java.srcDirs += [
+//             "build/generated/source/codegen/java",
+//             "build/generated/source/codegen/jni"
+//           ]
+//       }
+      assets.srcDirs = ['../assets']
     }
   }
 }
 
 repositories {
+  maven {
+    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+    url("$rootDir/../node_modules/react-native/android")
+  }
   mavenCentral()
   google()
 }
 
-def kotlin_version = getExtOrDefault("kotlinVersion")
+//def kotlin_version = getExtOrDefault("kotlinVersion")
 
 dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"
-  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'com.facebook.react:react-native:+'
+//  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-if (isNewArchitectureEnabled()) {
-  react {
-    jsRootDir = file("../src/")
-    libraryName = "Swisseph"
-    codegenJavaPackageName = "com.swisseph"
-  }
-}
+// if (isNewArchitectureEnabled()) {
+//   react {
+//     jsRootDir = file("../src/")
+//     libraryName = "Swisseph"
+//     codegenJavaPackageName = "com.reactnativelibrary.swisseph"
+//   }
+// }
+

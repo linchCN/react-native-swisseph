@@ -37,6 +37,7 @@ project.xcworkspace
 .idea
 .project
 .settings
+.yarn
 local.properties
 android.iml
 

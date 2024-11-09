@@ -1,9 +1,8 @@
 #ifdef __cplusplus
-#import "react-native-swisseph.h"
 #endif
 
 #ifdef RCT_NEW_ARCH_ENABLED
-#import "RNSwissephSpec.h"
+#import "RNSwissephObjCSpec.h"
 
 @interface Swisseph : NSObject <NativeSwissephSpec>
 #else
