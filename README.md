@@ -25,7 +25,7 @@
 1. Support for New Architecture
 2. Code uniformly implemented in C/C++
 3. Synchronous method calls
-4. Typescript Support
+4. Typescript support
 
 ## Usage
 ```typescript
