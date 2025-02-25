@@ -42,10 +42,10 @@ export interface Spec extends TurboModule {
     min: number,
     sec: number,
     gregflag: number
-  ): { tjd_et: number; tjd_ut: number };
+  ): { tjdEt: number; tjdUt: number };
 
   sweJdetToUtc(
-    tjd_et: number,
+    tjdEt: number,
     gregflag: number
   ): {
     year: number;
@@ -57,7 +57,7 @@ export interface Spec extends TurboModule {
   };
 
   sweJdut1ToUtc(
-    tjd_ut: number,
+    tjdUt: number,
     gregflag: number
   ): {
     year: number;
@@ -73,7 +73,7 @@ export interface Spec extends TurboModule {
   sweGetPlanetName(ipl: number): string;
 
   sweCalcUt(
-    tjd_ut: number,
+    tjdUt: number,
     ipl: number,
     iflag: number
   ): {
@@ -106,7 +106,7 @@ export interface Spec extends TurboModule {
   };
 
   sweHouses(
-    tjd_ut: number,
+    tjdUt: number,
     iflag: number,
     geolat: number,
     geolon: number,
@@ -127,13 +127,13 @@ export interface Spec extends TurboModule {
     hsys: string
   ): { longitude: number; latitude: number };
 
-  sweSetSidMode(sid_mode: number, t0: number, ayan_t0: number): void;
+  sweSetSidMode(sidMode: number, t0: number, ayanT0: number): void;
 
-  sweGetAyanamsaUt(tjd_ut: number): number;
+  sweGetAyanamsaUt(tjdUt: number): number;
 
-  sweSidtime(tjd_ut: number): number;
+  sweSidtime(tjdUt: number): number;
 
-  sweGetAyanamsa(tjd_et: number): number;
+  sweGetAyanamsa(tjdEt: number): number;
 
   sweFixstar(
     star: string,
@@ -147,7 +147,7 @@ export interface Spec extends TurboModule {
 
   sweFixstarUt(
     star: string,
-    tjd_ut: number,
+    tjdUt: number,
     iflag: number
   ): {
     longitude: number;
@@ -156,12 +156,12 @@ export interface Spec extends TurboModule {
   };
 
   sweHeliacalPhenoUt(
-    tjd_ut: number,
+    tjdUt: number,
     dgeo: number[],
     datm: number[],
     dobs: number[],
-    object_name: string,
-    event_type: number,
+    objectName: string,
+    eventType: number,
     helflag: number
   ): {
     tcAltitude: number;
@@ -199,12 +199,12 @@ export interface Spec extends TurboModule {
   };
 
   sweHeliacalUt(
-    tjd_ut: number,
+    tjdUt: number,
     dgeo: number[],
     datm: number[],
     dobs: number[],
-    object_name: string,
-    event_type: number,
+    objectName: string,
+    eventType: number,
     helflag: number
   ): {
     error?: boolean;
@@ -215,11 +215,11 @@ export interface Spec extends TurboModule {
   };
 
   sweVisLimitMag(
-    tjd_ut: number,
+    tjdUt: number,
     dgeo: number[],
     datm: number[],
     dobs: number[],
-    object_name: string,
+    objectName: string,
     helflag: number
   ): {
     error?: boolean;
@@ -234,7 +234,7 @@ export interface Spec extends TurboModule {
   };
 
   sweNodApsUt(
-    tjd_ut: number,
+    tjdUt: number,
     ipl: number,
     iflag: number,
     method: number

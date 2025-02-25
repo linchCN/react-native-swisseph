@@ -1,6 +1,6 @@
 {
   "name": "react-native-swisseph",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "test",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -88,7 +88,6 @@
   "workspaces": [
     "example"
   ],
-  "packageManager": "yarn@3.6.1",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [

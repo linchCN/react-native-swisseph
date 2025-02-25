@@ -58,12 +58,12 @@ export function sweUtcToJd(
   min: number,
   sec: number,
   gregflag: number
-): { tjd_et: number; tjd_ut: number } {
+): { tjdEt: number; tjdUt: number } {
   return Native.sweUtcToJd(year, month, day, hour, min, sec, gregflag);
 }
 
 export function sweJdetToUtc(
-  tjd_et: number,
+  tjdEt: number,
   gregflag: number
 ): {
   year: number;
@@ -73,11 +73,11 @@ export function sweJdetToUtc(
   minute: number;
   second: number;
 } {
-  return Native.sweJdetToUtc(tjd_et, gregflag);
+  return Native.sweJdetToUtc(tjdEt, gregflag);
 }
 
 export function sweJdut1ToUtc(
-  tjd_ut: number,
+  tjdUt: number,
   gregflag: number
 ): {
   year: number;
@@ -87,7 +87,7 @@ export function sweJdut1ToUtc(
   minute: number;
   second: number;
 } {
-  return Native.sweJdut1ToUtc(tjd_ut, gregflag);
+  return Native.sweJdut1ToUtc(tjdUt, gregflag);
 }
 
 export function sweSetTopo(
@@ -103,7 +103,7 @@ export function sweGetPlanetName(ipl: number): string {
 }
 
 export function sweCalcUt(
-  tjd_ut: number,
+  tjdUt: number,
   ipl: number,
   iflag: number
 ): {
@@ -114,7 +114,7 @@ export function sweCalcUt(
   latitudeSpeed: number;
   distanceSpeed: number;
 } {
-  return Native.sweCalcUt(tjd_ut, ipl, iflag);
+  return Native.sweCalcUt(tjdUt, ipl, iflag);
 }
 
 export function sweCotrans(
@@ -142,13 +142,13 @@ export function sweCalc(
 }
 
 export function sweHouses(
-  tjd_ut: number,
+  tjdUt: number,
   iflag: number,
   geolat: number,
   geolon: number,
   hsys: string
 ): { cusp: number[]; ascmc: number[] } {
-  return Native.sweHouses(tjd_ut, iflag, geolat, geolon, hsys);
+  return Native.sweHouses(tjdUt, iflag, geolat, geolon, hsys);
 }
 
 export function sweHousesArmc(
@@ -170,23 +170,23 @@ export function sweHousePos(
 }
 
 export function sweSetSidMode(
-  sid_mode: number,
+  sidMode: number,
   t0: number,
-  ayan_t0: number
+  ayanT0: number
 ): void {
-  return Native.sweSetSidMode(sid_mode, t0, ayan_t0);
+  return Native.sweSetSidMode(sidMode, t0, ayanT0);
 }
 
-export function sweGetAyanamsaUt(tjd_ut: number): number {
-  return Native.sweGetAyanamsaUt(tjd_ut);
+export function sweGetAyanamsaUt(tjdUt: number): number {
+  return Native.sweGetAyanamsaUt(tjdUt);
 }
 
-export function sweSidtime(tjd_ut: number): number {
-  return Native.sweSidtime(tjd_ut);
+export function sweSidtime(tjdUt: number): number {
+  return Native.sweSidtime(tjdUt);
 }
 
-export function sweGetAyanamsa(tjd_et: number): number {
-  return Native.sweGetAyanamsaUt(tjd_et);
+export function sweGetAyanamsa(tjdEt: number): number {
+  return Native.sweGetAyanamsaUt(tjdEt);
 }
 
 export function sweFixstar(
@@ -203,23 +203,23 @@ export function sweFixstar(
 
 export function sweFixstarUt(
   star: string,
-  tjd_ut: number,
+  tjdUt: number,
   iflag: number
 ): {
   longitude: number;
   latitude: number;
   distance: number;
 } {
-  return Native.sweFixstarUt(star, tjd_ut, iflag);
+  return Native.sweFixstarUt(star, tjdUt, iflag);
 }
 
 export function sweHeliacalPhenoUt(
-  tjd_ut: number,
+  tjdUt: number,
   dgeo: number[],
   datm: number[],
   dobs: number[],
-  object_name: string,
-  event_type: number,
+  objectName: string,
+  eventType: number,
   helflag: number
 ): {
   tcAltitude: number;
@@ -256,23 +256,23 @@ export function sweHeliacalPhenoUt(
   error?: string;
 } {
   return Native.sweHeliacalPhenoUt(
-    tjd_ut,
+    tjdUt,
     dgeo,
     datm,
     dobs,
-    object_name,
-    event_type,
+    objectName,
+    eventType,
     helflag
   );
 }
 
 export function sweHeliacalUt(
-  tjd_ut: number,
+  tjdUt: number,
   dgeo: number[],
   datm: number[],
   dobs: number[],
-  object_name: string,
-  event_type: number,
+  objectName: string,
+  eventType: number,
   helflag: number
 ): {
   error?: boolean;
@@ -282,22 +282,22 @@ export function sweHeliacalUt(
   endVisible?: number;
 } {
   return Native.sweHeliacalUt(
-    tjd_ut,
+    tjdUt,
     dgeo,
     datm,
     dobs,
-    object_name,
-    event_type,
+    objectName,
+    eventType,
     helflag
   );
 }
 
 export function sweVisLimitMag(
-  tjd_ut: number,
+  tjdUt: number,
   dgeo: number[],
   datm: number[],
   dobs: number[],
-  object_name: string,
+  objectName: string,
   helflag: number
 ): {
   error?: boolean;
@@ -310,11 +310,11 @@ export function sweVisLimitMag(
   AltM?: number;
   AziM?: number;
 } {
-  return Native.sweVisLimitMag(tjd_ut, dgeo, datm, dobs, object_name, helflag);
+  return Native.sweVisLimitMag(tjdUt, dgeo, datm, dobs, objectName, helflag);
 }
 
 export function sweNodApsUt(
-  tjd_ut: number,
+  tjdUt: number,
   ipl: number,
   iflag: number,
   method: number
@@ -324,7 +324,7 @@ export function sweNodApsUt(
   perihelion: number[];
   aphelion: number[];
 } {
-  return Native.sweNodApsUt(tjd_ut, ipl, iflag, method);
+  return Native.sweNodApsUt(tjdUt, ipl, iflag, method);
 }
 
 export function getHarmonyResfilePath(): string {
