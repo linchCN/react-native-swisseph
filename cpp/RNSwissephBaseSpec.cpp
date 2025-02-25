@@ -139,8 +139,8 @@ static facebook::jsi::Value __hostFunction_NativeSwissephSpecJSI_sweUtcToJd(face
     int gregflag = args[6].getNumber();
     auto result = swisseph::swe_utc_to_jd(year, month, day, hour, min, sec, gregflag);
     facebook::jsi::Object obj = facebook::jsi::Object(rt);
-    obj.setProperty(rt, "tjd_et", result["tjd_et"]);
-    obj.setProperty(rt, "tjd_ut", result["tjd_ut"]);
+    obj.setProperty(rt, "tjdEt", result["tjd_et"]);
+    obj.setProperty(rt, "tjdUt", result["tjd_ut"]);
     return facebook::jsi::Value(std::move(obj));
   } catch (std::exception &e) {
       printStackTrace(rt, e);
