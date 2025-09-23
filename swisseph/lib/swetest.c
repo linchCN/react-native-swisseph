@@ -683,7 +683,8 @@ int main(int argc, char *argv[])
 # ifdef MACOS
   argc = ccommand(&argv); /* display the arguments window */
 # endif
-  _SEGDataFilesCopyFrameworkPath(ephepath, ""); //strcpy(ephepath, "");
+  //_SEGDataFilesCopyFrameworkPath(ephepath, "");
+  strcpy(ephepath, "");
   strcpy(fname, SE_FNAME_DFT);
   for (i = 1; i < argc; i++) {
     if (strncmp(argv[i], "-ut", 3) == 0) {
