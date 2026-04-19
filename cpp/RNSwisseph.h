@@ -35,6 +35,7 @@ namespace swisseph {
   std::vector<double> swe_heliacal_pheno_ut(double tjd_ut, std::vector<double> dgeo, std::vector<double> datm, std::vector<double> dobs, const std::string& object_name, int event_type, int helflag);
   std::vector<double> swe_heliacal_ut(double tjd_ut, std::vector<double> dgeo, std::vector<double> datm, std::vector<double> dobs, const std::string& object_name, int event_type, int helflag);
   std::vector<double> swe_vis_limit_mag(double tjd_ut, std::vector<double> dgeo, std::vector<double> datm, std::vector<double> dobs, const std::string& object_name, int helflag);
+  std::map<std::string, double> swe_rise_trans(double tjd_ut, int ipl, const std::string &starname, int epheflag, int rsmi, double geolon, double geolat, double altitude, double pressure, double temperature);
   void swe_set_ephe_path(const char* path);
   void swe_close();
   std::string getPath();

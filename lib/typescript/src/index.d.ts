@@ -141,6 +141,9 @@ export declare function sweNodApsUt(tjdUt: number, ipl: number, iflag: number, m
     perihelion: number[];
     aphelion: number[];
 };
+export declare function sweRiseTrans(tjdUt: number, ipl: number, starname: string, epheflag: number, rsmi: number, geopos: number[], atpress?: number, attemp?: number): {
+    tret: number;
+};
 export declare function getHarmonyResfilePath(): string;
 export declare const Swisseph: {
     SE_JUL_CAL: number;
@@ -530,6 +533,7 @@ declare const _default: {
     sweHeliacalUt: typeof sweHeliacalUt;
     sweVisLimitMag: typeof sweVisLimitMag;
     sweNodApsUt: typeof sweNodApsUt;
+    sweRiseTrans: typeof sweRiseTrans;
     getHarmonyResfilePath: typeof getHarmonyResfilePath;
 };
 export default _default;

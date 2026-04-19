@@ -143,6 +143,9 @@ export interface Spec extends TurboModule {
         perihelion: number[];
         aphelion: number[];
     };
+    sweRiseTrans(tjdUt: number, ipl: number, starname: string, epheflag: number, rsmi: number, geopos: number[], atpress: number, attemp: number): {
+        tret: number;
+    };
     getHarmonyResfilePath(): string;
 }
 declare const _default: Spec;
