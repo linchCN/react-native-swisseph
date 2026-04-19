@@ -11,16 +11,18 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 # 启用详细编译日志（可选）
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
-set(ROOT_DIR "${CMAKE_SOURCE_DIR}/../../../../react-native-swisseph")
+set(ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/..")
 
-# React Native 基础路径
-set(REACT_NATIVE_DIR "${CMAKE_SOURCE_DIR}/../../../../react-native")
+# React Native 基础路径 (通常由 build.gradle 传入，这里提供兜底)
+if(NOT REACT_NATIVE_DIR)
+  set(REACT_NATIVE_DIR "${ROOT_DIR}/../react-native")
+endif()
 
 # ---------- 构建路径与源文件 ----------
-set(BUILD_DIR "${CMAKE_SOURCE_DIR}/build")
+set(BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build")
 
 file(GLOB RN_SWISSEPH_COMMON_SRC "${ROOT_DIR}/cpp/*.cpp")
-file(GLOB RN_SWISSEPH_ANDROID_SRC "${ROOT_DIR}/android/cpp/*.cpp")
+file(GLOB RN_SWISSEPH_ANDROID_SRC "${CMAKE_CURRENT_SOURCE_DIR}/cpp/*.cpp")
 file(GLOB RN_SWISSEPH_LIB_SRC "${ROOT_DIR}/swisseph/lib/*.c" "${ROOT_DIR}/swisseph/SwissEphGlue.c")
 
 
@@ -41,7 +43,7 @@ find_library(log-lib log)
 # ---------- 主 TurboModule 目标 ----------
 add_library(${PROJECT_NAME} SHARED
   ${RN_SWISSEPH_COMMON_SRC}
-  ${ROOT_DIR}/android/cpp-adapter.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/cpp-adapter.cpp
 )
 
 # React Native 编译 flags（0.76+ 新增）
@@ -55,7 +57,7 @@ endif()
 # ---------- include 目录 ----------
 target_include_directories(${PROJECT_NAME} PUBLIC
   ${ROOT_DIR}/cpp
-  ${ROOT_DIR}/android/cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/cpp
   ${ROOT_DIR}/swisseph
   ${ROOT_DIR}/swisseph/lib
   ${REACT_NATIVE_DIR}/ReactCommon
@@ -76,7 +78,7 @@ target_link_libraries(${PROJECT_NAME}
 add_library(react_codegen_Swisseph SHARED ${RN_SWISSEPH_ANDROID_SRC})
 target_include_directories(react_codegen_Swisseph PUBLIC
   ${ROOT_DIR}/cpp
-  ${ROOT_DIR}/android/cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/cpp
   ${ROOT_DIR}/swisseph
   ${ROOT_DIR}/swisseph/lib
 )
