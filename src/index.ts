@@ -327,6 +327,34 @@ export function sweNodApsUt(
   return Native.sweNodApsUt(tjdUt, ipl, iflag, method);
 }
 
+export function sweRiseTrans(
+  tjdUt: number,
+  ipl: number,
+  starname: string,
+  epheflag: number,
+  rsmi: number,
+  geolon: number,
+  geolat: number,
+  altitude: number,
+  pressure: number,
+  temperature: number
+): {
+  transitTime: number;
+} {
+  return Native.sweRiseTrans(
+    tjdUt,
+    ipl,
+    starname,
+    epheflag,
+    rsmi,
+    geolon,
+    geolat,
+    altitude,
+    pressure,
+    temperature
+  );
+}
+
 export function getHarmonyResfilePath(): string {
   // @ts-ignore
   if (Platform.OS === 'harmony') {
@@ -363,6 +391,7 @@ export default {
   sweHeliacalUt,
   sweVisLimitMag,
   sweNodApsUt,
+  sweRiseTrans,
   getHarmonyResfilePath,
   ...SwissephLib,
 };

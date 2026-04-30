@@ -485,6 +485,31 @@ static facebook::jsi::Value __hostFunction_NativeSwissephSpecJSI_sweVisLimitMag(
 }
 
 
+static facebook::jsi::Value __hostFunction_NativeSwissephSpecJSI_sweRiseTrans(
+    facebook::jsi::Runtime &rt, TurboModule &turboModule,
+    const facebook::jsi::Value *args, size_t count) {
+  try {
+    double tjd_ut = args[0].getNumber();
+    int ipl = (int)args[1].getNumber();
+    std::string starname = args[2].getString(rt).utf8(rt);
+    int epheflag = (int)args[3].getNumber();
+    int rsmi = (int)args[4].getNumber();
+    double geolon = args[5].getNumber();
+    double geolat = args[6].getNumber();
+    double altitude = args[7].getNumber();
+    double pressure = args[8].getNumber();
+    double temperature = args[9].getNumber();
+
+    auto result =
+        swisseph::swe_rise_trans(tjd_ut, ipl, starname, epheflag, rsmi, geolon,
+                                 geolat, altitude, pressure, temperature);
+    return facebook::jsi::Value(mapToJsiObject(rt, result));
+  } catch (std::exception &e) {
+    printStackTrace(rt, e);
+  }
+  return facebook::jsi::Value::undefined();
+}
+
 std::unordered_map<std::string, SwissephMethodMetadata> createMethodMap(){
   return {
     {"sweJulday", SwissephMethodMetadata {5, __hostFunction_NativeSwissephSpecJSI_sweJulday}},
@@ -511,7 +536,8 @@ std::unordered_map<std::string, SwissephMethodMetadata> createMethodMap(){
     {"sweHeliacalPhenoUt", SwissephMethodMetadata {7, __hostFunction_NativeSwissephSpecJSI_sweHeliacalPhenoUt}},
     {"sweHeliacalUt", SwissephMethodMetadata {7, __hostFunction_NativeSwissephSpecJSI_sweHeliacalUt}},
     {"sweVisLimitMag", SwissephMethodMetadata {6, __hostFunction_NativeSwissephSpecJSI_sweVisLimitMag}},
-    {"sweNodApsUt", SwissephMethodMetadata {4, __hostFunction_NativeSwissephSpecJSI_sweNodApsUt}}
+    {"sweNodApsUt", SwissephMethodMetadata {4, __hostFunction_NativeSwissephSpecJSI_sweNodApsUt}},
+    {"sweRiseTrans", SwissephMethodMetadata {10, __hostFunction_NativeSwissephSpecJSI_sweRiseTrans}}
   };
 }
 }

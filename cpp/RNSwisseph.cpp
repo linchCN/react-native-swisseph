@@ -211,6 +211,29 @@ std::vector<double> swe_vis_limit_mag(double tjd_ut, std::vector<double> dgeo, s
   return ret;
 }
 
+std::map<std::string, double>
+swe_rise_trans(double tjd_ut, int ipl, const std::string &starname,
+               int epheflag, int rsmi, double geolon, double geolat,
+               double altitude, double pressure, double temperature) {
+  double geopos[3] = {geolon, geolat, altitude};
+  double tret;
+  char serr[256];
+
+  char *star = nullptr;
+  if (!starname.empty()) {
+    star = const_cast<char *>(starname.c_str());
+  }
+
+  int result = ::swe_rise_trans(tjd_ut, ipl, star, epheflag, rsmi, geopos,
+                                pressure, temperature, &tret, serr);
+
+  if (result == -1) {
+    throw std::runtime_error(serr);
+  }
+
+  return {{"result", (double)result}, {"transitTime", tret}};
+}
+
 void swe_set_ephe_path(const char* path) {
   ::swe_set_ephe_path(const_cast<char*>(path));
 }
