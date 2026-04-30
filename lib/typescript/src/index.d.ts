@@ -141,8 +141,8 @@ export declare function sweNodApsUt(tjdUt: number, ipl: number, iflag: number, m
     perihelion: number[];
     aphelion: number[];
 };
-export declare function sweRiseTrans(tjdUt: number, ipl: number, starname: string, epheflag: number, rsmi: number, geopos: number[], atpress?: number, attemp?: number): {
-    tret: number;
+export declare function sweRiseTrans(tjdUt: number, ipl: number, starname: string, epheflag: number, rsmi: number, geolon: number, geolat: number, altitude: number, pressure: number, temperature: number): {
+    transitTime: number;
 };
 export declare function getHarmonyResfilePath(): string;
 export declare const Swisseph: {
