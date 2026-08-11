@@ -27,7 +27,7 @@ public class SwissephBridge {
 
   public static SwissephBridge createInstance(ReactApplicationContext context) {
     instance = new SwissephBridge();
-    new CopyAssetfiles(".*\\.se1", context).copy();
+    new CopyAssetfiles(".*\\.(se1|txt)", context).copy();
     initialize(context.getFilesDir() + File.separator + "/ephe");
     return instance;
   }

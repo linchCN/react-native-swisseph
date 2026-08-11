@@ -1,7 +1,7 @@
 {
   "name": "react-native-swisseph",
-  "version": "0.2.0",
-  "description": "test",
+  "version": "0.2.2",
+  "description": "swisseph",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",

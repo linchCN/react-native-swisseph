@@ -11,13 +11,13 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 # 启用详细编译日志（可选）
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
-set(ROOT_DIR "${CMAKE_SOURCE_DIR}/../../../../react-native-swisseph")
+set(ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/..")
 
 # React Native 基础路径
-set(REACT_NATIVE_DIR "${CMAKE_SOURCE_DIR}/../../../../react-native")
+set(REACT_NATIVE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../react-native")
 
 # ---------- 构建路径与源文件 ----------
-set(BUILD_DIR "${CMAKE_SOURCE_DIR}/build")
+set(BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build")
 
 file(GLOB RN_SWISSEPH_COMMON_SRC "${ROOT_DIR}/cpp/*.cpp")
 file(GLOB RN_SWISSEPH_ANDROID_SRC "${ROOT_DIR}/android/cpp/*.cpp")
@@ -41,13 +41,15 @@ find_library(log-lib log)
 # ---------- 主 TurboModule 目标 ----------
 add_library(${PROJECT_NAME} SHARED
   ${RN_SWISSEPH_COMMON_SRC}
-  ${ROOT_DIR}/android/cpp-adapter.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/cpp-adapter.cpp
 )
+
 
 # React Native 编译 flags（0.76+ 新增）
 if(ReactAndroid_VERSION_MINOR GREATER_EQUAL 80)
-  include("../../react-native/ReactCommon/cmake-utils/react-native-flags.cmake")
+  include("${REACT_NATIVE_DIR}/ReactCommon/cmake-utils/react-native-flags.cmake")
   target_compile_reactnative_options(${PROJECT_NAME} PUBLIC)
+
 else()
   string(APPEND CMAKE_CXX_FLAGS " -fexceptions -frtti -std=c++${CMAKE_CXX_STANDARD} -Wall")
 endif()
